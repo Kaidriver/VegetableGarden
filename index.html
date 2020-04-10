@@ -70,11 +70,10 @@
         }
         #test {
           margin-top: -1.7em;
-          font-size: 5vw;
         }
 
         .flower {
-          width: 25vw;
+          width: 27em;
         }
 
         .section-1 {
@@ -124,7 +123,7 @@
           width: 80%;
         }
         #address {
-          font-size: 2.5vw;
+
         }
         .nav-item {
           font-size: 150%;
@@ -149,11 +148,26 @@
            height: 100%;
 
         }
-
+        @media (max-width: 1260px) {
+          #address {
+            font-size: 1.5em;
+          }
+        }
         @media (max-width: 768px) {
           #flex {
             font-size: 125%;
           }
+          .img-title {
+            text-align: center;
+            margin-bottom: 15%;
+          }
+          #test {
+            font-size: 4em;
+          }
+          .flower {
+            width: 20em;
+          }
+
         }
     </style>
   </head>
@@ -264,7 +278,7 @@
             <h4 id = "address" class = "display-4 text-center">3830 International Dr. Silver Spring, MD 20906</h4>
             <div class = "row">
             <div class = "col-md-6">
-              <div id= "map"></div>
+              <div class = "embed-responsive" id= "map"></div>
             </div>
             <div class = "col-md-6">
               <div class="card mb-4">
