@@ -78,7 +78,7 @@
 
         .section-1 {
           background-image: url("https://static.wixstatic.com/media/84b448_af501acf3db741cc88d7c15f290e828a.jpg");
-
+          width: 100vw;
           display: grid;
           height: 100%;
           padding: 5%;
@@ -167,8 +167,18 @@
           .flower {
             width: 20em;
           }
-
+          .card {
+            font-size: 55%;
+          }
+          #title {
+            font-size: 3em;
+          }
+          .container {
+            width: 100% !important;
+            max-width: 100% !important;
+          }
         }
+
     </style>
   </head>
   <body data-spy = "scroll" data-target = "#myScrollspy" data-offset="50">
@@ -277,9 +287,9 @@
             </div>
             <h4 id = "address" class = "display-4 text-center">3830 International Dr. Silver Spring, MD 20906</h4>
             <div class = "row">
-            <div class = "col-md-6">
+            <!-- <div class = "col-md-6">
               <div class = "embed-responsive" id= "map"></div>
-            </div>
+            </div> -->
             <div class = "col-md-6">
               <div class="card mb-4">
                 <div class="card-body text-center">
