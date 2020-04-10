@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+    <style>
+        body {
+          font-family: 'Girassol', cursive;
+          overflow-x: hidden;
+        }
+        footer {
+          color: white;
+          background: #28a745;
+          padding: 1%;
+        }
+        td:first-child {
+          border-right: 1px solid white;
+        }
+        td {
+          padding: 5%;
+        }
+
+        .card-title {
+          padding: 3%;
+          border-bottom: 1px solid white;
+        }
+        .carousel-caption {
+          margin-bottom: 20%;
+          background: rgba(0, 0, 0, 0.35);
+          width: 100%;
+
+          max-width: 100%;
+          left: 0;
+          padding: 20px;
+        }
+
+        .card {
+          background: rgba(0, 0, 0, 0.35);
+          color: white;
+        }
+        .carousel-item{
+          height: 100vh;
+
+        }
+        .carousel {
+          width: 100vw;
+        }
+        .img-title {
+          text-align: center;
+          margin-bottom: 6em;
+          margin-top: 47%;
+        }
+        .wrapper {
+          opacity: 1 !important;
+        }
+        #map {
+          width: 100%;
+          height: 100%;
+        }
+        #test {
+          margin-top: -1.7em;
+        }
+
+        .flower {
+          width: 27em;
+        }
+
+        .section-1 {
+          background-image: url("https://static.wixstatic.com/media/84b448_af501acf3db741cc88d7c15f290e828a.jpg");
+
+          width: 100vw !important;
+          padding: 5%;
+          background-color: rgba(255, 255, 255, .6);
+          background-blend-mode: lighten;
+        }
+
+        .section-2 {
+          background-image: url("rest.jpg");
+              background-repeat: no-repeat;
+          width: 100vw !important;
+          padding: 5%;
+          background-color: rgba(255, 255, 255, .6);
+          background-blend-mode: lighten;
+        }
+        h3 {
+         overflow: hidden;
+         text-align: center;
+
+        }
+        h3:before,
+        h3:after {
+         background-color: black;
+         content: "";
+         display: inline-block;
+         height: 3px;
+         position: relative;
+         vertical-align: middle;
+         width: 50%;
+        }
+        h3:before {
+         right: 0.5em;
+         margin-left: -50%;
+        }
+        h3:after {
+          left: 0.5em;
+          margin-right: -50%;
+        }
+
+        #logo {
+          width: 80%;
+        }
+
+        .nav-item {
+          font-size: 150%;
+        }
+        .navbar-nav {
+          display: flex !important;
+          justify-content: space-evenly !important;
+        }
+        .navbar-nav:first-child {
+          margin-right: 5em;
+        }
+        .navbar-nav:last-child {
+          margin-left: 5em;
+        }
+        .navbar-brand {
+           position: absolute;
+           left: 50%;
+           transform: translateX(-50%);
+           top: 3px;
+           width: 10em;
+           height: 100%;
+
+        }
+
+        .menu {
+          background-image: url("rest.jpg");
+          background-repeat: no-repeat;
+          background-color: rgba(0,0,0,.7);
+          background-blend-mode: multiply;
+          width: 100vw;
+          height: 50%;
+          position: absolute;
+          top: 0;
+
+        }
+
+        #menu-title {
+          color: white;
+          text-align: center;
+          margin-top: 10%;
+          filter: none !important;
+        }
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+
+        }
+
+        .bottom {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .fixed {
+          width: 16% !important;
+        }
+
+        .right {
+          text-align: right;
+        }
+
+        table {
+          margin-bottom: -40% !important;
+        }
+        footer {
+          margin-top: 30%;
+        }
+
+        @media (max-width: 1200px) {
+          .fixed {
+            font-size: 80%;
+          }
+          #menu-title {
+            margin-top: 15%;
+          }
+          #starters {
+            margin-top: 53%;
+          }
+        }
+
+        @media (max-width: 993px) {
+          #menu-title {
+            margin-top: 20%;
+          }
+          #starters {
+            margin-top: 70%;
+          }
+        }
+
+        @media (max-width: 768px) {
+          #menu-title {
+            margin-top: 30%;
+          }
+          #starters {
+            margin-top: 92%;
+          }
+          .fixed {
+            font-size: 55%;
+          }
+        }
+    </style>
+  </head>
+  <body data-spy = "scroll" data-target = "#myScrollspy" data-offset="50">
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class = "navbar-brand" href = "index.html">
+        <img src="logo.png"  id = "logo" class = "mx-auto d-block" alt="Vegetable Garden">
+      </a>
+      <div class = "collapse navbar-collapse" id = "navbarSupportedContent">
+        <ul class = "navbar-nav w-100">
+          <li class = "nav-item active">
+            <a class = "nav-link" href = "index.html">Home<span class = "sr-only">(current)</span></a>
+          </li>
+
+          <li class = "nav-item active">
+            <a class = "nav-link" href = "#">Menu</a>
+          </li>
+
+          <li class = "nav-item active">
+            <a class = "nav-link" href = "special.html">Special Menu</a>
+          </li>
+
+        </ul>
+        <ul class = "navbar-nav w-100 ml-auto">
+          <li class = "nav-item nav-item2 active">
+            <a class = "nav-link" href = "#s1">About Us</a>
+          </li>
+
+          <li class = "nav-item nav-item2 active">
+            <a class = "nav-link" href = "#s2">Contact</a>
+          </li>
+
+          <li class = "nav-item nav-item2 active">
+            <a class = "nav-link" href = "gallery.html">Gallery</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class = "menu">
+
+      <h1 id = "menu-title" class = "display-1">Menu</h1>
+
+      <div class = "container">
+        <div class = "top">
+          <a href = "#starters" class = "btn btn-success btn-lg fixed">Starters|Sides</a>
+          <a href = "#sushi" class = "btn btn-success btn-lg fixed">Sushi</a>
+          <a href = "#soups" class = "btn btn-success btn-lg fixed">Hot Soups|Salad</a>
+          <a href = "#hotpot" class = "btn btn-success btn-lg fixed">Hotpot/Macro.</a>
+          <a href = "#gluten" class = "btn btn-success btn-lg fixed">Gluten-free|Asp.</a>
+          <a href = "#dessert" class = "btn btn-success btn-lg fixed">Dessert</a>
+        </div>
+        <br>
+        <div class = "bottom">
+          <a href = "#chicken" class = "btn btn-success btn-lg fixed">Mock Chicken</a>
+          <a href = "#beef" class = "btn btn-success btn-lg fixed">Mock Beef|Tofu</a>
+          <a href = "#entree" class = "btn btn-success btn-lg fixed">Main Entree</a>
+          <a href = "#rice" class = "btn btn-success btn-lg fixed">Rice|Noodles</a>
+          <a href = "#burgers" class = "btn btn-success btn-lg fixed">Burgers|Kiddie</a>
+          <a href = "#drinks" class = "btn btn-success btn-lg fixed">Drinks</a>
+        </div>
+      </div>
+    </div>
+
+    <div class = "container">
+      <div id = "starters">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Starters</h1>
+        </div>
+        <h3>Our appetizers are sure to start your meal off on a delicious note</h3>
+        <table class="table">
+          <caption class = "text-center">*Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Vegetarian Steamed Buns (4 pcs)</td>
+              <td></td>
+              <td class = "right">$4.99</td>
+            </tr>
+            <tr>
+              <td>Steamed Dumplings (4 pcs)</td>
+              <td></td>
+              <td class = "right">$4.99</td>
+            </tr>
+            <tr>
+              <td>Pan Fried Dumplings (4 pcs)</td>
+              <td></td>
+              <td class = "right">$4.99</td>
+            </tr>
+            <tr>
+              <td>Spring Roll (2 pcs)</td>
+              <td></td>
+              <td class = "right">$4.99</td>
+            </tr>
+            <tr>
+              <td>Crystal Spring Roll (2 pcs) *</td>
+              <td></td>
+              <td class = "right">$4.99</td>
+            </tr>
+            <tr>
+              <td>Edamame</td>
+              <td></td>
+              <td class = "right">$5.29</td>
+            </tr>
+            <tr>
+              <td>Crispy Black Mushroom</td>
+              <td></td>
+              <td class = "right">$8.99</td>
+            </tr>
+            <tr>
+              <td>Kabob Tempura (2 Skewers)</td>
+              <td>Ingredients: soy & wheat gluten, tricolor bell peppers, beets, taro roots, sweet potatoes, zucchini, mushroom and pineapples lightly battered and deep fried, served with Teriyaki sauce</td>
+              <td class = "right">$7.50</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div id = "sides">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Side Orders</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">*Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>French Fries</td>
+              <td></td>
+              <td class = "right">$4.50</td>
+            </tr>
+            <tr>
+              <td>Steamed Butternut Squash</td>
+              <td></td>
+              <td class = "right">$5.50</td>
+            </tr>
+            <tr>
+              <td>Steamed Sweet Yam with Maple Syrup</td>
+              <td></td>
+              <td class = "right">$5.50</td>
+            </tr>
+            <tr>
+              <td>Brown or White Rice</td>
+              <td></td>
+              <td class = "right">$2.50</td>
+            </tr>
+            <tr>
+              <td>Vegan Sesame Cold Noodle - Spicy</td>
+              <td>Wheat noodle, sesame paste, sesame seed, hot pepper, brown sugar, seaseed and soy sauce.</td>
+              <td class = "right">$8.99</td>
+            </tr>
+            <tr>
+              <td>General Tsao's Sweet Yam</td>
+              <td>Sweet yam with non-spicy general tsao's sauce.</td>
+              <td class = "right">$6.00</td>
+            </tr>
+            <tr>
+              <td>Spicy Cumin Fries</td>
+              <td>Fries, cumin, green & red onion, garlic, ginger, hot pepper and sea salt.</td>
+              <td class = "right">$7.00</td>
+            </tr>
+            <tr>
+              <td>Steamed Broccoli</td>
+              <td></td>
+              <td class = "right">$5.50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "sushi">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Sushi</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">*Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>White Rice California Roll</td>
+              <td></td>
+              <td class = "right">$5.99</td>
+            </tr>
+            <tr>
+              <td>Brown Rice California Roll</td>
+              <td></td>
+              <td class = "right">$5.99</td>
+            </tr>
+            <tr>
+              <td>Fotomaki Roll (6 pcs)</td>
+              <td></td>
+              <td class = "right">$7.99</td>
+            </tr>
+            <tr>
+              <td>Inarizushi Roll (4 pcs)</td>
+              <td></td>
+              <td class = "right">$5.99</td>
+            </tr>
+            <tr>
+              <td>Avocado Wrap Roll</td>
+              <td></td>
+              <td class = "right">$6.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Spring Roll</td>
+              <td></td>
+              <td class = "right">$4.50</td>
+            </tr>
+            <tr>
+              <td>Veggie Combo</td>
+              <td></td>
+              <td class = "right">$7.99</td>
+            </tr>
+            <tr>
+              <td>Vegan Eel Sushi(6ps)</td>
+              <td></td>
+              <td class = "right">$5.50</td>
+            </tr>
+            <tr>
+              <td>Mini Veggie Roll</td>
+              <td></td>
+              <td class = "right">$5.50</td>
+            </tr>
+            <tr>
+              <td>Seaweed Wrap Roll</td>
+              <td></td>
+              <td class = "right">$5.99</td>
+            </tr>
+            <tr>
+              <td>Spicy California Roll</td>
+              <td></td>
+              <td class = "right">$5.99</td>
+            </tr>
+            <tr>
+              <td>Purple Rice California Roll</td>
+              <td></td>
+              <td class = "right">$5.99</td>
+            </tr>
+            <tr>
+              <td>Deluxe Box</td>
+              <td>4 pcs sushi, 2 pcs inarizushi, 2 pcs chicken nuggets, edamame and marinated tofu skins</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Sushi Platter 12" Round</td>
+              <td></td>
+              <td class = "right">$25.00</td>
+            </tr>
+            <tr>
+              <td>Sushi Platter 16" Round</td>
+              <td></td>
+              <td class = "right">$50.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "soups">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Hot Soups</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">Gluten-free soy sauce by request | *Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Lentil Soup - 8oz. 16oz. 32oz.</td>
+              <td></td>
+              <td class = "right">$2.99 $4.99 $11.00</td>
+            </tr>
+            <tr>
+              <td>Wonton with Coriander Soup 8oz. 16oz. 32oz.</td>
+              <td></td>
+              <td class = "right">$2.00 $3.79 $7.58</td>
+            </tr>
+            <tr>
+              <td>Hot and Sour Soup 8oz. 16oz. 32oz.**</td>
+              <td></td>
+              <td class = "right">$2.00 $3.79 $7.58</td>
+            </tr>
+            <tr>
+              <td>House Vegetable Soup 8oz. 16oz. 32oz.***</td>
+              <td></td>
+              <td class = "right">$2.79 $4.29 $8.58</td>
+            </tr>
+            <tr>
+              <td>Veggie Gumbo Soup 8oz. 16oz. 32oz.</td>
+              <td></td>
+              <td class = "right">$2.99 $5.50 $11.00</td>
+            </tr>
+            <tr>
+              <td>Miso Soup 8oz. 16oz. 32oz.</td>
+              <td></td>
+              <td class = "right">$2.00 $3.79 $7.58</td>
+            </tr>
+            <tr>
+              <td>Butternut Squash Bisque 8oz. 16oz. 32oz.</td>
+              <td></td>
+              <td class = "right">$2.79 $4.99 $9.98</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "salads">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Salads</h1>
+        </div>
+        <h3>Hand-tossed and made to order with the freshest ingredients</h3>
+        <table class="table">
+          <caption class = "text-center">*Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Vegetable Garden Salad</td>
+              <td>Fresh spinach and arugula served with assorted seasonal vegetables and garlic croutons, dressed in a balsamic vinaigrette dressing</td>
+              <td class = "right">$5.99</td>
+            </tr>
+            <tr>
+              <td>Avocado Salad</td>
+              <td>Fresh slices of avocado drizzled with miso sauce</td>
+              <td class = "right">$6.99</td>
+            </tr>
+            <tr>
+              <td>Spicy Seaweed Salad **</td>
+              <td>Ingredients: seaweed, sesame seed, sesame oil, red chili pepper, sugar, soy sauce, salt, distilled vinegar, millet jelly and cooking wine</td>
+              <td class = "right">$5.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "hotpot">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Hot Pot</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">*gluten-free soy sauce by request </caption>
+          <tbody>
+            <tr>
+              <td>Veggie Duck Hot Pot</td>
+              <td>Ingredients: tofu skins, broccoli and black mushroom in basil ginger sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Curry Pond</td>
+              <td>Ingredients: turmeric (powder), cumin (powder), taro root (toran), acom squash, butternut squash, carrots, okra, sea salt, soy & wheat gluten</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Eggplant Hot Pot</td>
+              <td>Ingredients: eggplant in basil and ginger sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "macro">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Macrobiotic</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">*Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Bean Nest*</td>
+              <td>Ingredients: red kidney, chic peas, baby lima, lentil, azuki, pinto and black soy bean in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Garden Pan*</td>
+              <td>Ingredients: tofu skins, lotus root, kelp, nappa cabbage, cauliflower, seitan, tempeh, shiitake mushroom and carrots in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "gluten">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Gluten-Free</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">gluten-free soy sauce by request | *Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Asparagus Kung Pao Tofu**</td>
+              <td>Ingredients: asparagus, tofu, carrots, peanuts & hot peppers in spicy brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Asparagus with Shiitake Mushrooms & Soy Protein</td>
+              <td>Ingredients: asparagus, soy protein & shiitake mushroom in light sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Squash Boat**</td>
+              <td>Ingredients: shiitake mushroom, yellow squash, zucchini, red bell pepper, soy protein, cashew nuts and dried cranberries in spicy hot brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Tofu Steak with Mushroom Sauce</td>
+              <td>Ingredients: oyster mushroom, white mushroom, enoki mushroom, shiitake mushroom, portobello, tofu and red bell peppers in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Beauty's Tofu Ball with Kale</td>
+              <td>Ingredients: Organic, Gluten Free & Non-GMO soy bean curd(with edamame or lotus roots), kale, red bell peppers, vegetable oil, soy sauce, brown sugar, corn starch & fresh ginger in black bean sauce.</td>
+              <td class = "right">$14.99</td>
+            </tr>
+            <tr>
+              <td>Pearl Squash</td>
+              <td>Ingredients: butternut squash, red bell pepper, fresh ginger and beet in tasty light black bean sauce</td>
+              <td class = "right">$11.99</td>
+            </tr>
+            <tr>
+              <td>Vegetable Delight***</td>
+              <td>Ingredients: red chard, sugar snap peas, carrots, cauliflower, broccoli, mushroom and tomatoes in light sauce</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Double Delight**</td>
+              <td>Ingredients: shiitake mushroom, black mushroom, radish and string beans in spicy sauce</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Kung Pao Tofu**</td>
+              <td>Ingredients: tofu, yellow bell peppers, red bell peppers, green bell peppers, hot peppers & peanuts</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Rice Noodle with Vegetables</td>
+              <td>Ingredients: rice noodle, carrots, asparagus, black mushroom, sugar, snap peas, yellow squash and bean sprout</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Tong Mein Noodle Soup</td>
+              <td>Ingredients: rice made noodle, carrots, celery, black mushroom, bean sprout, cucumber, soy protein, fresh basil and cilantro in tasty clear broth</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Golden Rice Bowl</td>
+              <td>Ingredients: wild rice, red bell pepper, yellow squash, zucchini, mushroom, fresh ginger, garlic, tomato, carrots, soy protein and basil in tasty ginger & carrots sauce over rice</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Curry Fried Rice</td>
+              <td>Ingredients: green peas, carrots, potatoes, soy protein, bean sprouts, broccoli, pine nuts, curry leaves, cumin & turmeric (choice of brown or white sauce )</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Pineapple Fried Rice with Vegetables</td>
+              <td>Ingredients: white rice, carrots, yellow squash, snow peas, pineapple chunks, bean sprout, pine nuts, dried cranberries and black mushroom</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Mixed Rices with Vegetables</td>
+              <td>Ingredients: wild rice, brown rice, carrots, snow peas, broccoli, black mushroom, bean sprout, yellow squash, and dried cranberries</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Eggplant Hot Pot</td>
+              <td>Ingredients: eggplant in basil and ginger sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Bean Nest*</td>
+              <td>Ingredients: red kidney, chic peas, baby lima, lentil, azuki, pinto and black soy bean in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Eggplant Surprise</td>
+              <td>Ingredients: eggplant, red onions, green peppers, cilantro and ginger in garlic sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Eight Treasure Eggplant **</td>
+              <td>Ingredients: diced eggplant, shiitake mushroom, yellow squash, zucchini, red bell pepper, dried cranberries, cashew nuts and firm tofu in spicy sauce.</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Eggplant with Black Bean Sauce **</td>
+              <td>Ingredients: eggplant, hot pepper, ginger in black bean sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Carved & Curled Shiitake Mushrooms with Asparagus **</td>
+              <td>Ingredients: shiitake mushroom, asparagus and carrots in GF soy sauce.</td>
+              <td class = "right">$16.99</td>
+            </tr>
+            <tr>
+              <td>Butternut Squash Palate *</td>
+              <td>Ingredients: butternut squash, kelps, lotus roots, snow peas, carrots and mushrooms in light brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Abalone *</td>
+              <td>Ingredients: fresh tofu skins, shiitake mushroom, tomatoes, broccoli and soy protein in light brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Mushroom Forest **</td>
+              <td>Ingredients: shiitake, oyster, portabello, crimini, enoki and white mushroom in spicy sauce</td>
+              <td class = "right">$14.99</td>
+            </tr>
+            <tr>
+              <td>Hen of the Wood **</td>
+              <td>Ingredients: hen of the woods, asparagus and red bell peppers in tiny spicy Sha Cha sauce</td>
+              <td class = "right">$17.99</td>
+            </tr>
+            <tr>
+              <td>Minced Vegetable Nest</td>
+              <td>Ingredients: firm tofu, wild rice, lily bulb, zucchini, red bell peppers, soy protein, dried cranberries, spinach, rice vermicelli and yellow squash</td>
+              <td class = "right">$14.99</td>
+            </tr>
+            <tr>
+              <td>Spicy Cumin Tofu **</td>
+              <td>Ingredients: fresh tofu lightly fried with red and green onions, garlic, ginger, red hot peppers, hot chili pepper powder, sea salt and cumin</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Hunan Veggie Chicken **</td>
+              <td>White mushroom, carrots, broccoli, tofu fiber, wheat gluten and hot peppers in tasty brown sauce.</td>
+              <td class = "right">$13.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "asparagus">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Asparagus</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">*Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Asparagus with Oyster Mushrooms and Yuba</td>
+              <td>Ingredients: tofu skins, oyster mushroom and asparagus in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Asparagus Kung Pao Tofu **</td>
+              <td>Ingredients: asparagus, tofu, carrots, peanuts & hot peppers in spicy brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Asparagus with Veggie Chicken</td>
+              <td>Ingredients: soy & wheat gluten, asparagus and carrots in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Asparagus with Shiitake Mushrooms & Soy Protein</td>
+              <td>Ingredients: asparagus, soy protein & shiitake mushroom in light sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Duck with Asparagus</td>
+              <td>Ingredients: tofu skins, potatoes, black mushroom, yellow squash, asparagus and carrots</td>
+              <td class = "right">$13.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "chicken">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Mock Chicken</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">*Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>General Tsao's Veggie Chicken **</td>
+              <td>Ingredients: soy & wheat gluten, hot pepper, corn starch, raw sugar, broccoli and soy sauce</td>
+              <td class = "right">$15.49</td>
+            </tr>
+            <tr>
+              <td>Sesame Veggie Chicken ***</td>
+              <td>Ingredients: firm tofu, wheat flour, carrots & sesame seeds, raw sugar, soy sauce, yellow squash & asparagus in sweet brown sauce</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Chicken with Cashew Nuts***</td>
+              <td>Ingredients: soy & wheat gluten, broccoli and cashews in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Teriyaki Chichen Nuggets</td>
+              <td>Ingredients: asparagus, yellow squash, carrots, veggie chicken nuggets (soy & wheat gluten made) and teriyaki dipping sauce</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Sweet and Sour Veggie Chicken***</td>
+              <td>Ingredients: firm tofu, wheat flour, carrots, green pepper, dried cranberries, sugar snap peas, pineapple chunks and rambutans in sweet & sour sauce</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Kung Pao Veggie Chicken**</td>
+              <td>Ingredients: soy & wheat gluten, yellow, red, green bell peppers, peanuts and hot peppers in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Lemon Chicken ***</td>
+              <td>Ingredients: organic firm tofu coated with wheat flour in home made delicious lemon sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Chicken with Broccoli</td>
+              <td>Ingredients: veggie chicken stir-fried with broccoli in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Curry Supreme</td>
+              <td>Ingredients: soy & wheat gluten potatoes, carrots, lima bean, broccoli, cumin, turmeric powder and sea salt</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Curry Fantasia</td>
+              <td>Ingredients: soy & wheat gluten, taro roots, carrots, lima beans, chayote squash, jicama and broccoli in a creamy curry and coconut milk sauce</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>General Tsao's Tofu</td>
+              <td>Fresh tofu(fried in soybean oil to crispy), hot pepper, soy sauce, raw sugar and broccoli in spicy brown sauce.</td>
+              <td class = "right">$12.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "beef">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Mock Beef</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">*Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Crispy Beef **</td>
+              <td>Ingredients: black mushroom, celery and carrots in a special light tasty sauce</td>
+              <td class = "right">$14.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Sesame Beef with Taro Roots</td>
+              <td>Ingredients: soy & wheat gluten, taro roots, soy sauce, brown sugar, sesame, carrots and sugar snap peas in sweet brown sauce</td>
+              <td class = "right">$15.99</td>
+            </tr>
+            <tr>
+              <td>Hunan Veggie Beef**</td>
+              <td>Ingredients: wheat gluten, broccoli, carrots, mushroom, soy sauce and dried hot peppers in spicy brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Beef with Broccoli</td>
+              <td>Ingredients: soy & wheat gluten beef stir fried with broccoli in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Orange Beef with Pineapple**</td>
+              <td>Ingredients: soy & wheat gluten, broccoli or spinach, pineapple, hot pepper, soy sauce and raw sugar in sweet orange flavored brown sauce</td>
+              <td class = "right">$15.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Beef with Pecan & Yam</td>
+              <td>Ingredients: soy & wheat gluten, yam, spaghetti squash, pecan, carrots, dried craisins, soy sauce and raw sugar in sweet brown sauce</td>
+              <td class = "right">$15.99</td>
+            </tr>
+            <tr>
+              <td>Sha Cha Beef **</td>
+              <td>Ingredients: wheat gluten, snow peas, baby bamboo shoots and red bell peppers in spicy Sha Cha sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "tofu">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Tofu</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">*Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Kung Pao Tofu **</td>
+              <td>Ingredients: tofu, yellow bell peppers, red bell peppers, green bell peppers, hot peppers & peanuts</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Emerald Bean Curd **</td>
+              <td>Ingredients: frech bean curd in julienne, soy fibers, green onions, spicy peppers in tasty black bean sauce</td>
+              <td class = "right">$11.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "entree">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Main Entrees</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">gluten-free soy sauce by request | *Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Butternut Squash Palate *</td>
+              <td>Ingredients: butternut squash, kelps, lotus roots, snow peas, carrots and mushrooms in light brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Sweet & Sour Delight ***</td>
+              <td>Ingredients: potatoes, yam, wheat flour and carrots, green pepper, dried cranberries, sugar snap peas, pineapple chucks and rambutans in sweet & sour sauce</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Hen of the Wood **</td>
+              <td>Ingredients: hen of the woods, asparagus and red bell peppers in tiny spicy Sha Cha sauce</td>
+              <td class = "right">$17.99</td>
+            </tr>
+            <tr>
+              <td>Vegetable Delight ***</td>
+              <td>Ingredients: red chard, sugar snap peas, carrots, cauliflower, broccoli, mushroom and tomatoes in light sauce</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Lima Bean with Shiitake Mushroom**</td>
+              <td>Ingredients: lima bean, shiitake mushroom, sour cabbage, seitan and hot pepper in brown spicy sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Carved & Curled Shiitake Mushrooms with Asparagus**</td>
+              <td>Ingredients: shiitake mushroom, asparagus and carrots in GF soy sauce.</td>
+              <td class = "right">$16.99</td>
+            </tr>
+            <tr>
+              <td>Jian Pao Veggie Gourmet **</td>
+              <td>Ingredients: asparagus, tofu, lily bulb, sugar snap peas, oyster mushroom, yellow squash and red bell pepper in spicy sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Tofu Steak with Mushroom Sauce</td>
+              <td>Ingredients: oyster mushroom, white mushroom, enoki mushroom, shiitake mushroom, portobello, tofu and red bell peppers in brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Triple Delight **</td>
+              <td>Ingredients: eggplant, black mushroom, lotus root and hot pepper in sweet spicy hot sauce</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Pearl Squash</td>
+              <td>Ingredients: butternut squash, red bell pepper, fresh ginger and beet in tasty light black bean sauce</td>
+              <td class = "right">$11.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Abalone *</td>
+              <td>Ingredients: fresh tofu skins, shiitake mushroom, tomatoes, broccoli and soy protein in light brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Sha Cha Tempeh **</td>
+              <td>Ingredients: shiitake mushroom, sugar snap peas, red chard, carrots and organic 3 grain tempeh in tiny spicy Sha Cha sauce</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Hunan Veggie Chicken **</td>
+              <td>White mushroom, carrots, broccoli, tofu fiber, wheat gluten and hot peppers in tasty brown sauce.</td>
+              <td class = "right">$13.99</td>
+            </tr>
+            <tr>
+              <td>Beauty's Tofu Ball with Kale</td>
+              <td>Organic, Non-GMO, Gluten Free Soy Bean Curd(with Edamame OR Lotus Root), Kale, Black Bean, Red Bell Pepper, Fresh Ginger, Gluten Free Soy Sauce, Brown Sugar and Cornstarch.</td>
+              <td class = "right">$14.99</td>
+            </tr>
+            <tr>
+              <td>Sweet & Sour Tofu Ball</td>
+              <td>Organic, Non-GMO, Gluten Free Soy Bean Curd(with Edamame OR Lotus), Snow Peas, Carrots, Red Bell Pepper, Rambutan, Dried Cranberries, Tomato Sauce, Sea Salt, Brown Sugar and Potato Starch.</td>
+              <td class = "right">$14.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "rice">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Rice</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">gluten-free soy sauce by request | *Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Golden Rice Bowl</td>
+              <td>Ingredients: wild rice, red bell pepper, yellow squash, zucchini, mushroom, fresh ginger, garlic, tomato, carrots, soy protein and basil in tasty ginger & carrots sauce over rice</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Curry Fried Rice</td>
+              <td>Ingredients: green peas, carrots, potatoes, soy protein, bean sprouts, broccoli, pine nuts, curry leaves, cumin & turmeric (choice of brown or white sauce)</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Garden Teriyaki Bowl/Tofu/Veggie Beef/Tempeh</td>
+              <td>Ingredients: bamboo shoots, carrots, red onion, shiitake mushroom, baby corns, garlic, scallions, broccoli, organic mixed quinoa & black pepper stir fried with brown rice in delicious teriyaki sauce.</td>
+              <td class = "right">$11.99/12.99/13.99/14.99</td>
+            </tr>
+            <tr>
+              <td>Pineapple Fried Rice with Vegetables</td>
+              <td>Ingredients: white rice, carrots, yellow squash, snow peas, pineapple chunks, bean sprout, pine nuts, dried cranberries and black mushroom</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Mixed Rices with Vegetables</td>
+              <td>Ingredients: wild rice, brown rice, carrots, snow peas, broccoli, black mushroom, bean sprout, yellow squash, and dried cranberries</td>
+              <td class = "right">$12.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "noodle">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Noodles</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">*Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Udon Noodle with Vegetables</td>
+              <td>Ingredients: udon noodle, lily flower, snow peas, red chard, yellow squash, black mushroom, soy protein and bean sprout in light brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Soba Noodle with Vegetables *</td>
+              <td>Ingredients: organic soba and buckwheat noodle, carrots, snow peas, yellow squash, black mushroom, bean sprout, cauliflower and broccoli in light brown sauce</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Rice Noodle with Vegetables</td>
+              <td>Ingredients: rice noodle, carrots, asparagus, black mushroom, sugar, snap peas, yellow squash and bean sprout</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Tong Mein Noodle Soup</td>
+              <td>Ingredients: rice made noodle, carrots, celery, black mushroom, bean sprout, cucumber, soy protein, fresh basil and cilantro in tasty clear broth</td>
+              <td class = "right">$12.99</td>
+            </tr>
+            <tr>
+              <td>Vegan Beef Noodle Soup **</td>
+              <td>Ingredients: soy and gluten protein mock beef, cilantro, green onion, hot chili pepper with home-made noodles in spicy tasty broth</td>
+              <td class = "right">$12.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "burgers">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Burgers</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">gluten-free soy sauce by request | *Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Portoballo Burger</td>
+              <td>Ingredients: wheat bread, lettuce, tomatoes, portobello mushroom, avocado, red onion, miso sauce and grape seed oil vegennaise and french fries</td>
+              <td class = "right">$11.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Burger</td>
+              <td>Ingredients: wheat bread, vegan burger, tomatoes, lettuces and grape seed oil vegennaise with french fried on the side</td>
+              <td class = "right">$11.99</td>
+            </tr>
+            <tr>
+              <td>The Beyond Burger</td>
+              <td>Plant-Based Burger, vegan cheese, tomato, red onion, romaine lettuces hearts, pickles, vegenaise and wheat bun with sesame. Served with french fries</td>
+              <td class = "right">$14.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "kiddie">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Kiddie Menu</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">gluten-free soy sauce by request | *Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Veggie Chicken Nuggets</td>
+              <td></td>
+              <td class = "right">$8.99</td>
+            </tr>
+            <tr>
+              <td>Veggie Chicken Burger with French Fries</td>
+              <td></td>
+              <td class = "right">$8.99</td>
+            </tr>
+            <tr>
+              <td>Sweet & Sour Veggie Chicken</td>
+              <td></td>
+              <td class = "right">$8.99</td>
+            </tr>
+            <tr>
+              <td>Sesame Veggie Chicken</td>
+              <td></td>
+              <td class = "right">$8.99</td>
+            </tr>
+            <tr>
+              <td>General Tsao's Chicken</td>
+              <td></td>
+              <td class = "right">$8.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id = "dessert">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Dessert</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">gluten-free soy sauce by request | *Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Sesame Rice Ball-Gluten Free (4 pcs)</td>
+              <td></td>
+              <td class = "right">$3.00</td>
+            </tr>
+            <tr>
+              <td>Red Bean Bun (3 pcs)</td>
+              <td></td>
+              <td class = "right">$4.79</td>
+            </tr>
+            <tr>
+              <td>Pies</td>
+              <td>Choices: Key Lime Pie or Gluten Free Key Lime Pie</td>
+              <td class = "right">$4.89/Slice</td>
+            </tr>
+            <tr>
+              <td>Vegan Chocolate Orange Mousse Pie</td>
+              <td>Ingredients: organic tofu, dairy-free chocolate chips, organic cane sugar, alcohol-free orange oil and sea salt. *Gluten Free available.</td>
+              <td class = "right">$6.39/Slice</td>
+            </tr>
+            <tr>
+              <td>Vegan & Gluten-Free Cookies (1 pcs)</td>
+              <td>Choices: Mandarin White Chocolate Chip Cookies & Triple Chocolate Cookies.</td>
+              <td class = "right">$4.99</td>
+            </tr>
+            <tr>
+              <td>Vegan Cakes and Cheesecakes</td>
+              <td>Amazing and delicious cakes and cheesecakes made from Vegan Treats in Bethlehem, Pennsylvania.</td>
+              <td class = "right">Call</td>
+            </tr>
+            <tr>
+              <td>Death by Chocolate cake</td>
+              <td></td>
+              <td class = "right">$6.25/Slice</td>
+            </tr>
+            <tr>
+              <td>Death by Chocolate-GF</td>
+              <td></td>
+              <td class = "right">$6.99/Slice</td>
+            </tr>
+            <tr>
+              <td>Coconut Custard Cake</td>
+              <td></td>
+              <td class = "right">$5.95/Slice</td>
+            </tr>
+            <tr>
+              <td>Carrot Cake with Cream Cheese Frosting</td>
+              <td></td>
+              <td class = "right">$5.95/Slice</td>
+            </tr>
+            <tr>
+              <td>Vanilla Raspberry Mousse Cake</td>
+              <td></td>
+              <td class = "right">$5.95/Slice</td>
+            </tr>
+            <tr>
+              <td>Raspberry White Chocolate Cheesecake</td>
+              <td></td>
+              <td class = "right">$5.95/Slice</td>
+            </tr>
+            <tr>
+              <td>Peanut Butter Mousse Bomb</td>
+              <td></td>
+              <td class = "right">$5.95/Slice</td>
+            </tr>
+            <tr>
+              <td>Cannolis</td>
+              <td></td>
+              <td class = "right">$6.50/2ps</td>
+            </tr>
+            <tr>
+              <td>Chocolate Chip/Oatmeal Raisin Cookies</td>
+              <td></td>
+              <td class = "right">$4.50/piece</td>
+            </tr>
+            <tr>
+              <td>Tiramisu Cake</td>
+              <td></td>
+              <td class = "right">$5.95/Slice</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id = "drinks">
+        <div class = "img-title">
+          <img class = "img-fluid flower" src = "clearFlower.png">
+          <h1 id = "test" class = "display-1">Drinks</h1>
+        </div>
+
+        <table class="table">
+          <caption class = "text-center">gluten-free soy sauce by request | *Heart Healthy Choice |  **Spicy | ***Organic</caption>
+          <tbody>
+            <tr>
+              <td>Hot Tea/per person</td>
+              <td>Choices: Jasmine tea, Green tea and Earl Grey tea. Caffeine-free: Herbal tea</td>
+              <td class = "right">$1.50</td>
+            </tr>
+            <tr>
+              <td>Fresh Brewed Coffee</td>
+              <td>Choices: Regular or Decaf.</td>
+              <td class = "right">$1.50</td>
+            </tr>
+            <tr>
+              <td>Soda</td>
+              <td>Choices: Coke, Diet Coke & Sprite</td>
+              <td class = "right">$1.50</td>
+            </tr>
+            <tr>
+              <td>Nantucket Nectars & Snapple Grapeade</td>
+              <td>Snapple: Grapeade. Nantucket Nectars: Big Cranberry, Orange Mango, Red Plum and Pomegranate Pear.</td>
+              <td class = "right">$2.75</td>
+            </tr>
+            <tr>
+              <td>Vegan & Gluten-Free Cookies (1 pcs)</td>
+              <td>Choices: Mandarin White Chocolate Chip Cookies & Triple Chocolate Cookies.</td>
+              <td class = "right">$4.99</td>
+            </tr>
+            <tr>
+              <td>Organic Carrot Juice (small, large)</td>
+              <td></td>
+              <td class = "right">$3.49, $4.99</td>
+            </tr>
+            <tr>
+              <td>Orange Juice (small, large)</td>
+              <td></td>
+              <td class = "right">$3.79, $4.99</td>
+            </tr>
+            <tr>
+              <td>Apple Juice ***</td>
+              <td></td>
+              <td class = "right">$2.89, $4.39</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer>
+      <small>&copy; Copyright 2020, Vegetable Garden</small>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtcmlrhzho_t4_W6XyTS7EJThivLihHN8&callback=initMap"></script>
+    <script src = "main.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.27/bootstrap-native-v4.min.js"></script>
+
+  </body>
+</html>
