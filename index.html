@@ -39,7 +39,7 @@
           width: 100%;
           padding: 20px;
           min-height: 20px !important;
-          overflow: hidden;
+
         }
 
         .carousel {
@@ -157,6 +157,14 @@
            height: 100%;
 
         }
+
+        .link {
+          color: white;
+        }
+
+        .link:hover {
+          color: white;
+        }
         @media (max-width: 1260px) {
           #address {
             font-size: 1.5em;
@@ -187,7 +195,11 @@
             max-width: 100% !important;
           }
         }
-
+        @media (min-width: 100px) {
+          .col-xs-6 {
+            width: 50% !important;
+          }
+        }
     </style>
   </head>
   <body data-spy = "scroll" data-target = "#myScrollspy" data-offset="50">
@@ -245,6 +257,12 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -277,13 +295,34 @@
           <div class="carousel-item">
             <img class="d-block w-100 carousel-img" src="frontpage10.png" alt="Second slide">
           </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-img" src="frontpage11.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-img" src="frontpage12.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-img" src="frontpage13.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-img" src="frontpage14.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-img" src="frontpage15.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-img" src="frontpage16.png" alt="Second slide">
+          </div>
         </div>
         <div class="carousel-caption">
               <h1 id = "title" class = "display-1">Vegetable Garden</h1>
               <h3 id = "flex">One of the area's best meatless retreats</h3>
               <h5>Established 1994</h5>
+              <br>
+              <h5>ATTENTION: The resturant is closed, but we are open everyday by calling in or walking in until 7:30 daily (Hours may vary without notice)</h5>
+              <h5>We also deliver through these services: <a class = "link" href = "https://www.grubhub.com/restaurant/vegetable-garden-3830-international-dr-silver-spring/289084">Grubhub</a> <a class = "link" href = "https://postmates.com/merchant/vegetable-garden-silver-spring">Postmates</a> <a class = "link"  href = "https://www.doordash.com/store/vegetable-garden-silver-spring-236144/en-US">Door Dash</a> <a class = "link"  href = "https://www.bitesquad.com/food/vegetable-garden/3928">Bite Squad</a></h5>
 
-              <a href = "menu.html"class = "btn btn-success mt-3 btn-lg">View Menu</a>
+              <a href = "menu.html" class = "btn btn-success mt-3 btn-lg">View Menu</a>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -324,29 +363,33 @@
             </div>
             <h4 id = "address" class = "display-4 text-center">3830 International Dr. Silver Spring, MD 20906</h4>
             <div class = "row">
-            <div class = "col-md-6">
+            <div class = "col-xs-6 col-sm-6 col-md-6 col-lg-6">
               <div class = "embed-responsive" id= "map"></div>
             </div>
-            <div class = "col-md-6">
+            <div class = "col-xs-6 col-sm-6 col-md-6 col-lg-6">
               <div class="card mb-4">
                 <div class="card-body text-center">
                   <h5 class="card-title ">Opening Hours</h5>
-                  <table align = "center">
-                    <tr><td>Monday-Saturday</td><td>11:15am - 10:00pm</td></tr>
-                    <tr><td>Sunday</td><td>11:15am - 9:30pm</td></tr>
-                    <tr><td>Holidays</td><td>Open</td></tr>
-                  </table>
+                  <div class="table-responsive">
+                    <table align = "center">
+                      <tr><td>Monday-Saturday</td><td>11:15am - 10:00pm</td></tr>
+                      <tr><td>Sunday</td><td>11:15am - 9:30pm</td></tr>
+                      <tr><td>Holidays</td><td>Open</td></tr>
+                    </table>
+                  </div>
                 </div>
               </div>
 
               <div class="card">
                 <div class="card-body text-center">
                   <h5 class="card-title">Contact Us</h5>
-                  <table align = "center">
-                    <tr><td>Call</td><td>301.598.6868</td></tr>
-                    <tr><td>Fax</td><td>301.598.1981</td></tr>
-                    <tr><td>Email</td><td>thevegetablegardensilverspring@gmail.com</td></tr>
-                  </table>
+                  <div class="table-responsive">
+                    <table align = "center">
+                      <tr><td>Call</td><td>301.598.6868</td></tr>
+                      <tr><td>Fax</td><td>301.598.1981</td></tr>
+                      <tr><td>Email</td><td>thevegetablegardensilverspring@gmail.com</td></tr>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
