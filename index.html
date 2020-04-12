@@ -38,8 +38,7 @@
           background: rgba(0, 0, 0, 0.35);
           width: 100%;
           padding: 20px;
-          min-height: 20px !important;
-
+          height: auto !important;
         }
 
         .carousel {
@@ -198,6 +197,12 @@
         @media (min-width: 100px) {
           .col-xs-6 {
             width: 50% !important;
+          }
+        }
+
+        @media (max-height: 800px) {
+          .carousel-caption h5 {
+            font-size: 90%;
           }
         }
     </style>
