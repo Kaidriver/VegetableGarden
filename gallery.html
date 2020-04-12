@@ -10,6 +10,7 @@
     <style>
         body {
           font-family: 'Girassol', cursive;
+          margin-bottom: 15%;
           overflow-x: hidden;
         }
         footer {
@@ -89,29 +90,7 @@
           background-color: rgba(255, 255, 255, .6);
           background-blend-mode: lighten;
         }
-        h3 {
-         overflow: hidden;
-         text-align: center;
 
-        }
-        h3:before,
-        h3:after {
-         background-color: black;
-         content: "";
-         display: inline-block;
-         height: 3px;
-         position: relative;
-         vertical-align: middle;
-         width: 50%;
-        }
-        h3:before {
-         right: 0.5em;
-         margin-left: -50%;
-        }
-        h3:after {
-          left: 0.5em;
-          margin-right: -50%;
-        }
 
         #logo {
           width: 80%;
@@ -140,8 +119,10 @@
         }
 
         .menu {
-          background-image: url("rest.jpg");
+          background-image: url("frontview.png");
+          background-position: center;
           background-repeat: no-repeat;
+          background-size: cover;
           background-color: rgba(0,0,0,.7);
           background-blend-mode: multiply;
           width: 100vw;
@@ -192,6 +173,40 @@
           display: flex;
           justify-content: space-evenly;
         }
+
+        .blurred {
+          width: 30% !important;
+          position: relative;
+          transition: .3s;
+        }
+
+        .blurred:hover img {
+          filter: blur(2px) brightness(60%);
+        }
+
+        .blurred img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .blurred :not(img) {
+          position: absolute;
+          top: 40%;
+          z-index: 1;
+          color: white;
+          text-align: center;
+          width: 100%;
+          opacity: 0;
+          transition: .3s;
+        }
+
+        .blurred:hover :not(img) {
+          opacity: 1;
+        }
+
+        h3 {
+          font-size: 2em;
+        }
     </style>
   </head>
   <body data-spy = "scroll" data-target = "#myScrollspy" data-offset="50">
@@ -210,7 +225,7 @@
           </li>
 
           <li class = "nav-item active">
-            <a class = "nav-link" href = "#">Menu</a>
+            <a class = "nav-link" href = "menu.html">Menu</a>
           </li>
 
           <li class = "nav-item active">
@@ -241,23 +256,143 @@
     <div class = "container">
 
       <div class = "flexbox first">
-          <img src="spaghet.webp" class="fixed text-center" alt="Responsive image">
-          <img src="superdinner.webp" class="fixed text-center" alt="Responsive image">
-          <img src="sushi.webp" class="fixed text-center" alt="Responsive image">
+        <div class = "blurred">
+          <img src="frontpage.png" class="text-center" alt="Responsive image">
+          <h3>Sweet and Sour Veggie Chicken</h3>
+        </div>
+        <div class = "blurred">
+          <img src="frontpage2.png" class="text-center" alt="Responsive image">
+          <h3>Veggie Combo</h3>
+        </div>
+        <div class = "blurred">
+          <img src="frontpage3.png" class="text-center" alt="Responsive image">
+          <h3>Sesame Scallion Bread</h3>
+        </div>
       </div>
 
       <div class = "flexbox mt-5">
-          <img src="spaghet.webp" class="fixed text-center" alt="Responsive image">
-          <img src="superdinner.webp" class="fixed text-center" alt="Responsive image">
-          <img src="sushi.webp" class="fixed text-center" alt="Responsive image">
+        <div class = "blurred">
+          <img src="frontpage4.png" class="text-center" alt="Responsive image">
+          <h3>Spicy Brown Rice California Roll</h3>
+        </div>
+        <div class = "blurred">
+          <img src="frontpage5.png" class="text-center" alt="Responsive image">
+          <h3>Bamboo Raft</h3>
+        </div>
+        <div class = "blurred">
+          <img src="frontpage6.png" class="text-center" alt="Responsive image">
+          <h3>Brown Rice California Roll</h3>
+        </div>
       </div>
 
       <div class = "flexbox mt-5">
-          <img src="spaghet.webp" class="fixed text-center" alt="Responsive image">
-          <img src="superdinner.webp" class="fixed text-center" alt="Responsive image">
-          <img src="sushi.webp" class="fixed text-center" alt="Responsive image">
+        <div class = "blurred">
+          <img src="frontpage7.png" class="text-center" alt="Responsive image">
+          <h3>Vegan Beef Noodle Soup</h3>
+        </div>
+        <div class = "blurred">
+          <img src="frontpage8.png" class="text-center" alt="Responsive image">
+          <h3>Mini Veggie Roll</h3>
+        </div>
+        <div class = "blurred">
+          <img src="frontpage9.png" class="text-center" alt="Responsive image">
+          <h3>Shacha Tempeh</h3>
+        </div>
+      </div>
+
+      <div class = "flexbox mt-5">
+        <div class = "blurred">
+          <img src="frontpage11.png" class="text-center" alt="Responsive image">
+          <h3>Eggplant Surprise</h3>
+        </div>
+        <div class = "blurred">
+          <img src="frontpage12.png" class="text-center" alt="Responsive image">
+          <h3>Spicy Cumin Tofu</h3>
+        </div>
+        <div class = "blurred">
+          <img src="frontpage13.png" class="text-center" alt="Responsive image">
+          <h3>Shacha Beef</h3>
+        </div>
+      </div>
+
+      <div class = "flexbox mt-5">
+        <div class = "blurred">
+          <img src="gallery.png" class="text-center" alt="Responsive image">
+          <h3>Teriyaki Garden Bowl</h3>
+        </div>
+        <div class = "blurred">
+          <img src="gallery2.png" class="text-center" alt="Responsive image">
+          <h3>General Tsao's Yam</h3>
+        </div>
+        <div class = "blurred">
+          <img src="gallery3.png" class="text-center" alt="Responsive image">
+          <h3>Exotic Cumin Fries</h3>
+        </div>
+      </div>
+
+      <div class = "flexbox mt-5">
+        <div class = "blurred">
+          <img src="gallery4.png" class="text-center" alt="Responsive image">
+          <h3>Seaweed Wrap Roll</h3>
+        </div>
+        <div class = "blurred">
+          <img src="gallery5.png" class="text-center" alt="Responsive image">
+          <h3>Brown Rice California Roll</h3>
+        </div>
+        <div class = "blurred">
+          <img src="gallery6.png" class="text-center" alt="Responsive image">
+          <h3>Spicy California Roll</h3>
+        </div>
+      </div>
+
+      <div class = "flexbox mt-5">
+        <div class = "blurred">
+          <img src="gallery7.png" class="text-center" alt="Responsive image">
+          <h3>Vegan Eel Roll</h3>
+        </div>
+        <div class = "blurred">
+          <img src="gallery8.png" class="text-center" alt="Responsive image">
+          <h3>Inari Sushi</h3>
+        </div>
+        <div class = "blurred">
+          <img src="gallery9.png" class="text-center" alt="Responsive image">
+          <h3>Veggie Combo</h3>
+        </div>
+      </div>
+
+      <div class = "flexbox mt-5">
+        <div class = "blurred">
+          <img src="gallery10.png" class="text-center" alt="Responsive image">
+          <h3>Vegan Eel Sushi</h3>
+        </div>
+        <div class = "blurred">
+          <img src="gallery11.png" class="text-center" alt="Responsive image">
+          <h3>Veggie Spring Roll</h3>
+        </div>
+        <div class = "blurred">
+          <img src="gallery12.png" class="text-center" alt="Responsive image">
+          <h3>Avocado Roll</h3>
+        </div>
+      </div>
+
+      <div class = "flexbox mt-5">
+        <div class = "blurred">
+          <img src="gallery16.png" class="text-center" alt="Responsive image">
+          <h3>Fotomaki Roll (6 pcs)</h3>
+        </div>
+        <div class = "blurred">
+          <img src="gallery17.png" class="text-center" alt="Responsive image">
+          <h3>Gen. Wilmington's Shoe</h3>
+        </div>
+        <div class = "blurred">
+          <img src="gallery18.png" class="text-center" alt="Responsive image">
+          <h3>Weekday Special</h3>
+        </div>
       </div>
     </div>
+    <footer>
+      <small>&copy; Copyright 2020, Vegetable Garden</small>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
