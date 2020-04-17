@@ -56,9 +56,10 @@
           width: 100vw;
         }
         .img-title {
-          text-align: center;
-          margin-bottom: 6em;
-          margin-top: 47%;
+          margin: 0 auto;
+          margin-bottom: 8%;
+          display: table;
+          margin-top: 40%;
         }
         .wrapper {
           opacity: 1 !important;
@@ -68,11 +69,13 @@
           height: 100%;
         }
         #test {
-          margin-top: -1.7em;
+          margin-top: -1.5em;
+          z-index: 1;
         }
 
         .flower {
-          width: 27em;
+          width: 10em;
+          margin-left: -50px;
         }
 
         .section-1 {
@@ -191,12 +194,16 @@
           margin-top: -20%;
         }
 
+        #lunch {
+          margin-top: 45%;
+        }
+
         @media (max-width: 1199px) {
           #menu-title {
             margin-top: 15%;
           }
           #lunch {
-            margin-top: 40%;
+            margin-top: 43%;
           }
         }
 
@@ -220,7 +227,8 @@
             font-size: 4em;
           }
           .flower {
-            width: 20em;
+            margin-left: -37px;
+            width: 7em;
           }
           .fixed {
             width: 23% !important;
@@ -234,17 +242,25 @@
         }
         @media (max-width: 520px) {
           #lunch {
-            margin-top: 85%;
+            margin-top: 75%;
           }
 
           .fixed {
             font-size: 100%;
           }
+
+          #test {
+            font-size: 3em;
+          }
+          .flower {
+            margin-left: -23px;
+            width: 5em;
+          }
         }
 
         @media (max-width: 450px) {
           #lunch {
-            margin-top: 110%;
+            margin-top: 95%;
           }
 
           .fixed {
@@ -255,6 +271,11 @@
           }
         }
 
+        @media (max-width: 336px) {
+          #lunch {
+            margin-top: 120%;
+          }
+        }
         @media (min-width: 100px) {
           .col-xs-4 {
             width: 33% !important;
@@ -321,7 +342,7 @@
     <div class = "container">
       <div id = "lunch">
         <div class = "img-title">
-          <img class = "img-fluid flower" src = "clearFlower.png">
+          <img class = "img-fluid flower" src = "bord2.png">
           <h1 id = "test" class = "display-1">Lunch</h1>
         </div>
         <table class="table">
@@ -472,7 +493,7 @@
       </div>
       <div id = "weekday">
         <div class = "img-title">
-          <img class = "img-fluid flower" src = "clearFlower.png">
+          <img class = "img-fluid flower" src = "bord2.png">
           <h1 id = "test" class = "display-1">Weekday</h1>
         </div>
         <h3>Only $13.99</h3>
@@ -558,7 +579,7 @@
       </div>
       <div id = "dinner">
         <div class = "img-title">
-          <img class = "img-fluid flower" src = "clearFlower.png">
+          <img class = "img-fluid flower" src = "bord2.png">
           <h1 id = "test" class = "display-1">Dinner</h1>
         </div>
         <h3>Only $18.99</h3>
