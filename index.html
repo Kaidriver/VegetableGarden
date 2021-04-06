@@ -24,10 +24,21 @@
         td:first-child {
           border-right: 1px solid white;
         }
+
         td {
-          padding: 5%;
+          padding: 2%;
+          font-size: 135%;
+        }
+
+        .table-responsive {
+          overflow: hidden;
+        }
+
+        #break {
+          word-break: break-all;
         }
         .card-title {
+          font-size: 200%;
           padding: 3%;
           border-bottom: 1px solid white;
         }
@@ -44,7 +55,7 @@
         .carousel {
           height: 100vh;
           width: 100%;
-          overflow:hidden;
+          overflow: hidden;
         }
         .carousel .carousel-inner {
           height:100%;
@@ -58,6 +69,7 @@
         .card {
           background: rgba(0, 0, 0, 0.35);
           color: white;
+          height: 300px;
         }
 
         .img-title {
@@ -83,7 +95,7 @@
         }
 
         .section-1 {
-          background-image: url("inside.png");
+          background-image: url("inside.jpg");
           width: 100vw;
           display: grid;
           height: 100%;
@@ -96,7 +108,7 @@
         }
 
         .section-2 {
-          background-image: url("frontview2.png");
+          background-image: url("frontview2.jpg");
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
@@ -185,7 +197,7 @@
             width: 7em;
           }
           .card {
-            font-size: 55%;
+            font-size: 85%;
           }
           #title {
             font-size: 3em;
@@ -330,6 +342,7 @@
               <h5>We also deliver through these services: <a class = "link" href = "https://www.grubhub.com/restaurant/vegetable-garden-3830-international-dr-silver-spring/289084">Grubhub</a> <a class = "link" href = "https://postmates.com/merchant/vegetable-garden-silver-spring">Postmates</a> <a class = "link"  href = "https://www.doordash.com/store/vegetable-garden-silver-spring-236144/en-US">Door Dash</a> <a class = "link"  href = "https://www.bitesquad.com/food/vegetable-garden/3928">Bite Squad</a></h5>
 
               <a href = "menu.html" class = "btn btn-success mt-3 btn-lg">View Menu</a>
+              <a href = "https://www.mealage.com/2foodmenu8.jsp?sessionid=1617581625848A1731791471229yveunusyvbhkjvegsblhcmsgshhc&restaurantId=8047&categoryId=null" class = "btn btn-success mt-3 btn-lg">Order Online</a>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -370,22 +383,21 @@
             </div>
             <h4 id = "address" class = "display-4 text-center">3830 International Dr. Silver Spring, MD 20906</h4>
             <div class = "row">
-            <div class = "col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <div class = "embed-responsive" id= "map"></div>
-            </div>
-            <div class = "col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class = "col-lg-6">
               <div class="card mb-4">
                 <div class="card-body text-center">
                   <h5 class="card-title ">Opening Hours</h5>
                   <div class="table-responsive">
                     <table align = "center">
                       <tr><td>Monday-Sunday</td><td>11:30am - 9:00pm</td></tr>
+                      <tr><td>Tuesday</td><td>Closed</td></tr>
                       <tr><td>Holidays</td><td>Open</td></tr>
                     </table>
                   </div>
                 </div>
               </div>
-
+            </div>
+            <div class = "col-lg-6">
               <div class="card">
                 <div class="card-body text-center">
                   <h5 class="card-title">Contact Us</h5>
@@ -393,7 +405,7 @@
                     <table align = "center">
                       <tr><td>Call</td><td>301.598.6868</td></tr>
                       <tr><td>Fax</td><td>301.598.1981</td></tr>
-                      <tr><td>Email</td><td>thevegetablegardensilverspring@gmail.com</td></tr>
+                      <tr><td>Email</td><td id="break">thevegetablegardensilverspring@gmail.com</td></tr>
                     </table>
                   </div>
                 </div>
@@ -404,7 +416,7 @@
         </div>
       </div>
       <footer>
-        <small>&copy; Copyright 2020, Vegetable Garden</small>
+        <small>&copy; Copyright 2021, Vegetable Garden</small>
       </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
