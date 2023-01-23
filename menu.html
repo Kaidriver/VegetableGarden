@@ -23,7 +23,10 @@
           bottom: 0;
           width: 100%;
         }
-
+        footer small {
+          margin-left: 2%;
+          font-size: 100%;
+        }
         td:first-child {
            font-weight: bold;
         }
@@ -163,6 +166,20 @@
 
         }
 
+        .dropdown button {
+          width: 30%;
+          background-color: #28a745;
+        }
+
+        .dropdown-menu {
+          right: auto;
+          left: 50%;
+          width: 30%;
+          -webkit-transform: translate(-50%, 0);
+          -o-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+        }
+
         #menu-title {
           color: white;
           text-align: center;
@@ -207,7 +224,7 @@
           margin-bottom: 15%;
         }
         #starters {
-          margin-top: 50%;
+          margin-top: 30%;
         }
 
         @media (max-width: 1199px) {
@@ -218,7 +235,7 @@
             margin-top: 15%;
           }
           #starters {
-            margin-top: 52%;
+            margin-top: 47%;
           }
         }
 
@@ -232,7 +249,7 @@
             font-size: 90%;
           }
           #starters {
-            margin-top: 62%;
+            margin-top: 52%;
           }
           h3 {
             font-size: 1.1em;
@@ -244,7 +261,7 @@
             margin-top: 27%;
           }
           #starters {
-            margin-top: 82%;
+            margin-top: 72%;
           }
           .fixed {
             font-size: 55%;
@@ -255,6 +272,17 @@
           .flower {
             margin-left: -37px;
             width: 7em;
+          }
+
+          .navbar-brand {
+             width: 7em;
+          }
+
+          .mobile {
+            visibility: hidden;
+            display: block;
+            width: 0;
+            height: 0;
           }
         }
 
@@ -283,12 +311,15 @@
 
         @media (max-width: 450px) {
           #menu-title {
-            margin-top: 50%;
+            margin-top: 35%;
           }
           #starters {
-            margin-top: 110%;
+            margin-top: 80%;
           }
 
+          .dropdown button {
+            width: 60%;
+          }
         }
 
         @media (max-width: 380px) {
@@ -296,8 +327,13 @@
             font-size: .7em;
           }
           #starters {
-            margin-top: 135%;
+            margin-top: 95%;
           }
+          .menu .container {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
         }
 
 
@@ -347,24 +383,26 @@
     <div class = "menu">
 
       <h1 id = "menu-title" class = "display-1">Menu</h1>
-      <h2 id = "menu-title2" class = "display-1">*Our cakes and cookies are not available at this time*</h2>
+      <h2 id = "menu-title2" class = "display-1 mb-2">*Our cake/cookies are not available at this time*</h2>
       <div class = "container">
-        <div class = "top">
-          <a href = "#starters" class = "btn btn-success btn-lg fixed">Starters|Sides</a>
-          <a href = "#sushi" class = "btn btn-success btn-lg fixed">Sushi</a>
-          <a href = "#soups" class = "btn btn-success btn-lg fixed">Hot Soups|Salad</a>
-          <a href = "#hotpot" class = "btn btn-success btn-lg fixed">Hotpot|Macro.</a>
-          <a href = "#gluten" class = "btn btn-success btn-lg fixed">Glutn-free|Asp.</a>
-          <a href = "#dessert" class = "btn btn-success btn-lg fixed">Dessert</a>
-        </div>
-        <br>
-        <div class = "bottom">
-          <a href = "#chicken" class = "btn btn-success btn-lg fixed">Veggie Chicken</a>
-          <a href = "#beef" class = "btn btn-success btn-lg fixed">Veggie Beef|Tofu</a>
-          <a href = "#entree" class = "btn btn-success btn-lg fixed">Main Entree</a>
-          <a href = "#rice" class = "btn btn-success btn-lg fixed">Rice|Noodles</a>
-          <a href = "#burgers" class = "btn btn-success btn-lg fixed">Burgers|Kid's</a>
-          <a href = "#drinks" class = "btn btn-success btn-lg fixed">Drinks</a>
+        <div class="dropdown text-center">
+          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Navigate
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a href = "#starters" class = "dropdown-item">Starters/Sides</a>
+            <a href = "#sushi" class = "dropdown-item">Sushi</a>
+            <a href = "#soups" class = "dropdown-item">Hot Soups/Salad</a>
+            <a href = "#hotpot" class = "dropdown-item">Hotpot/Macro.</a>
+            <a href = "#gluten" class = "dropdown-item">Glutn-free/Asp.</a>
+            <a href = "#dessert" class = "dropdown-item">Dessert</a>
+            <a href = "#chicken" class = "dropdown-item">Veggie Chicken</a>
+            <a href = "#beef" class = "dropdown-item">Veggie Beef/Tofu</a>
+            <a href = "#entree" class = "dropdown-item">Main Entree</a>
+            <a href = "#rice" class = "dropdown-item">Rice/Noodles</a>
+            <a href = "#burgers" class = "dropdown-item">Burgers/Kids Menu</a>
+            <a href = "#drinks" class = "dropdown-item">Drinks</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1423,7 +1461,8 @@
             </tr>
             <tr>
               <td>Spring Water</td>
-              <td class = "right">$1.75   </td>
+              <td></td>
+              <td class = "right">$1.75</td>
             </tr>
             <tr>
               <td>Soda</td>
