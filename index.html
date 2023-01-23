@@ -11,8 +11,8 @@
     <title>Vegetable Garden | Vegan Resturant in Silver Spring, MD</title>
     <style>
         body {
-          overflow-x: hidden;
           font-family: 'Girassol', cursive;
+          overflow-x: hidden;
         }
         footer {
           color: white;
@@ -32,26 +32,41 @@
           font-size: 135%;
         }
 
-        .table-responsive {
-          overflow: hidden;
-        }
-
-        #break {
+        .card-body p {
+          font-size: 135%;
           word-break: break-all;
         }
+
         .card-title {
           font-size: 200%;
           padding: 3%;
           border-bottom: 1px solid white;
         }
+
         .carousel-caption {
           top: 50%;
           left: 0;
           transform: translateY(-50%);
-          background: rgba(0, 0, 0, 0.35);
+          background: rgba(0, 0, 0, 0.6);
           width: 100%;
           padding: 20px;
-          height: auto !important;
+          height: fit-content;
+        }
+
+        .overlay-buttons {
+          display: block;
+        }
+
+        .overlay-buttons a {
+          margin-right: 0.5%;
+        }
+
+        #doordash {
+          color: #28a745;
+        }
+
+        .carousel-caption h5 {
+          font-size: 125% !important;
         }
 
         .carousel {
@@ -69,7 +84,7 @@
           background-position: center;
         }
         .card {
-          background: rgba(0, 0, 0, 0.35);
+          background: rgba(0, 0, 0, 0.6);
           color: white;
           height: 300px;
         }
@@ -82,13 +97,19 @@
         .wrapper {
           opacity: 1 !important;
         }
-        #map {
-          width: 100%;
-          height: 100%;
-        }
+
         #test {
           margin-top: -1.5em;
           z-index: 1;
+        }
+
+        .about-overlay {
+          margin-top: -4%;
+          background: rgba(0, 0, 0, 0.6);
+          color: white;
+          padding: 3%;
+          font-size: 125%;
+          border-radius: 10px;
         }
 
         .flower {
@@ -98,7 +119,7 @@
 
         .section-1 {
           background-image: url("inside.jpg");
-          width: 100vw;
+          width: 100vw !important;
           display: grid;
           height: 100%;
           padding: 5%;
@@ -117,9 +138,11 @@
           display: grid;
           height: 100%;
           padding: 5%;
+          width: 100vw;
           background-color: rgba(255, 255, 255, .6);
           background-blend-mode: lighten;
         }
+
         h3 {
          overflow: hidden;
          text-align: center;
@@ -205,21 +228,48 @@
             margin-left: -150px;
             width: 7em;
           }
+
+          .navbar-brand {
+             position: absolute;
+             left: 50%;
+             transform: translateX(-50%);
+             top: 3px;
+             width: 7em;
+             height: 100%;
+          }
+
+          .overlay-buttons a {
+            font-size: 110%;
+          }
+
           .card {
             font-size: 85%;
           }
+
           #title {
             font-size: 3em;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .carousel-caption h5 {
+            font-size: 90% !important;
+          }
+
+          #s1 {
+            padding-left: 0%;
+            padding-right: 0%;
           }
           .container {
             width: 100% !important;
             max-width: 100% !important;
+            padding-left: 3%;
+            padding-right: 3%;
           }
-        }
 
-        @media (max-width: 420px) {
-          .carousel-caption h5 {
-            font-size: 88%;
+          h3:before,
+          h3:after {
+           display: none;
           }
         }
 
@@ -276,24 +326,6 @@
 
 
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
-        </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100 carousel-img" src="frontpage.jpg" alt="First slide">
@@ -349,20 +381,14 @@
               <h3 id = "flex">One of the area's best meatless retreats</h3>
               <h5>Established 1994</h5>
               <br>
-              <h5>ATTENTION: The resturant is closed for dine in, but we are open everyday (except Tuesday) by calling, ordering online, or walking in. At this moment, we are not offering our lunch and weekday menus.</h5>
-              <h5>We also deliver through these services: <a class = "link" href = "https://www.grubhub.com/restaurant/vegetable-garden-3830-international-dr-silver-spring/289084">Grubhub</a> <a class = "link" href = "https://postmates.com/merchant/vegetable-garden-silver-spring">Postmates</a> <a class = "link"  href = "https://www.doordash.com/store/vegetable-garden-silver-spring-236144/en-US">Door Dash</a> <a class = "link"  href = "https://www.bitesquad.com/food/vegetable-garden/3928">Bite Squad</a></h5>
+              <h5>ATTENTION: The resturant is now open for dine in every day (except Tuesdays). </h5>
+              <h5>We also deliver through <a id="doordash" class = "link"  href = "https://www.doordash.com/store/vegetable-garden-silver-spring-236144/en-US" target="_blank">Door Dash</a>
 
-              <a href = "menu.html" class = "btn btn-success mt-3 btn-lg">View Menu</a>
-              <a href = "https://www.mealage.com/2foodmenu8.jsp?sessionid=1617581625848A1731791471229yveunusyvbhkjvegsblhcmsgshhc&restaurantId=8047&categoryId=null" class = "btn btn-success mt-3 btn-lg">Order Online</a>
+              <div class="overlay-buttons">
+                <a href = "menu.html" class = "btn btn-success mt-3 btn-lg">View Menu</a>
+                <a href = "https://www.mealage.com/2foodmenu8.jsp?sessionid=1617581625848A1731791471229yveunusyvbhkjvegsblhcmsgshhc&restaurantId=8047&categoryId=null" class = "btn btn-success mt-3 btn-lg" target="_blank">Order Online</a>
+              </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
 
 
@@ -373,12 +399,10 @@
               <img class = "img-fluid flower" src = "bord2.png">
               <h1 id = "test" class = "display-1">About Us</h1>
             </div>
+              <div class = "col-md-12 about-overlay">
+                <p> There are no surprises when you show up at Vegetable Garden because every dish gets a photograph in living color on the menu. Thus an order of 'beef' with pecans looks exactly like it does in its picture (although those beef strips turn out to be soy protein in a sweet glaze). With its light pink walls and sea-green carpet, the small dining room is a modestly attractive place to refuel, and the servers are quick to bring you something refreshing from the juice bar and to deliver your food, which is made without meat, dairy, eggs or MSG. Among the draws are crisp and greaseless spring rolls, each bite bursting with cabbage, carrot and black mushrooms; gently tingling Kung Pao tofu, colorful with red and green sweet bell peppers; and soft chunks of eggplant in a delicate black bean sauce.  Vegetable Garden is innovative, one of the area's best meatless retreats! Not the whole menu is organic, but good percentage of the items are in organic version. The welcome is warm, and the small bonuses (your water is filtered). </p>
 
-
-              <div class = "col-md-12">
-                <p class = "lead mt-4"> There are no surprises when you show up at Vegetable Garden because every dish gets a photograph in living color on the menu. Thus an order of 'beef' with pecans looks exactly like it does in its picture (although those beef strips turn out to be soy protein in a sweet glaze). With its light pink walls and sea-green carpet, the small dining room is a modestly attractive place to refuel, and the servers are quick to bring you something refreshing from the juice bar and to deliver your food, which is made without meat, dairy, eggs or MSG. Among the draws are crisp and greaseless spring rolls, each bite bursting with cabbage, carrot and black mushrooms; gently tingling Kung Pao tofu, colorful with red and green sweet bell peppers; and soft chunks of eggplant in a delicate black bean sauce.  Vegetable Garden is innovative, one of the area's best meatless retreats! Not the whole menu is organic, but good percentage of the items are in organic version. The welcome is warm, and the small bonuses (your water is filtered). </p>
-
-                <p class = "lead mt-4"> Our menu is specifically designed with your health in mind. According to the American Heart Association, a diet that is high in saturated fats and cholesterol contributes to the development of heart disease and cancer. Following the recommendations, we have carefully selected a variety of dishes, cooked in a very little amount (or none) of vegetable oil which is low in saturated fat, cholesterol and completely Transfat Free! Our entire cuisine is MSG Free! In addition, we offer unprocessed natural brown rice only, white rice is also availale but by request. We provide non-fat menu consisting of steamed dishes only, and a juice bar where you can get freshly squeezed juices and wheat grass. Even senator Joe Lieberman chose us as one of his favorite dining places. </p>
+                <p class = "mt-4"> Our menu is specifically designed with your health in mind. According to the American Heart Association, a diet that is high in saturated fats and cholesterol contributes to the development of heart disease and cancer. Following the recommendations, we have carefully selected a variety of dishes, cooked in a very little amount (or none) of vegetable oil which is low in saturated fat, cholesterol and completely Transfat Free! Our entire cuisine is MSG Free! In addition, we offer unprocessed natural brown rice only, white rice is also availale but by request. We provide non-fat menu consisting of steamed dishes only, and a juice bar where you can get freshly squeezed juices and wheat grass. Even senator Joe Lieberman chose us as one of his favorite dining places. </p>
               </div>
           </div>
         </div>
@@ -394,40 +418,36 @@
             </div>
             <h4 id = "address" class = "display-4 text-center">3830 International Dr. Silver Spring, MD 20906</h4>
             <div class = "row">
-            <div class = "col-lg-6">
-              <div class="card mb-4">
-                <div class="card-body text-center">
-                  <h5 class="card-title ">Opening Hours</h5>
-                  <div class="table-responsive">
-                    <table align = "center">
-                      <tr><td>Monday-Sunday</td><td>12:00pm - 7:45pm</td></tr>
-                      <tr><td>Tuesday</td><td>Closed</td></tr>
-                      <tr><td>Holidays</td><td>Open</td></tr>
-                    </table>
+              <div class = "col-lg-6">
+                <div class="card mb-4">
+                  <div class="card-body text-center">
+                    <h5 class="card-title ">Opening Hours</h5>
+                    <div class="table-responsive">
+                      <table align = "center">
+                        <tr><td>Monday-Sunday</td><td>11:45pm - 8:00pm</td></tr>
+                        <tr><td>Tuesday</td><td>Closed</td></tr>
+                        <tr><td>Holidays</td><td>Open</td></tr>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class = "col-lg-6">
-              <div class="card">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Contact Us</h5>
-                  <div class="table-responsive">
-                    <table align = "center">
-                      <tr><td>Call</td><td>301.598.6868</td></tr>
-                      <tr><td>Fax</td><td>301.598.1981</td></tr>
-                      <tr><td>Email</td><td id="break">thevegetablegardensilverspring@gmail.com</td></tr>
-                    </table>
+              <div class = "col-lg-6">
+                <div class="card">
+                  <div class="contact-us card-body text-center">
+                    <h5 class="card-title">Contact Us</h5>
+                    <p>301.598.6868  &nbsp;(Phone)</p>
+                    <p>301.598.1981  &nbsp;(Fax)</p>
+                    <p>thevegetablegardensilverspring@gmail.com</p>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
           </div>
         </div>
       </div>
       <footer>
-        <small>&copy; Copyright 2021, Vegetable Garden</small>
+        <small>&copy; Copyright 2023, Vegetable Garden</small>
       </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
